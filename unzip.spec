@@ -1,6 +1,6 @@
 Name:           unzip
 Version:        6.0
-Release:        41
+Release:        42
 Summary:        A utility for unpacking zip files
 License:        BSD
 URL:            http://www.info-zip.org/UnZip.html
@@ -31,8 +31,6 @@ Patch0022:      unzip-6.0-timestamp.patch
 Patch0023:      unzip-6.0-cve-2018-1000035-heap-based-overflow.patch
 
 Patch6000:      CVE-2018-18384.patch
-Patch6001:      CVE-2019-13232-pre.patch
-Patch6002:      CVE-2019-13232.patch
 
 BuildRequires:  bzip2-devel
 
@@ -66,7 +64,9 @@ Package help includes man pages for unzip.
 %files help
 %{_mandir}/man1/*
 
-
 %changelog
+* Sat Dec 21 2019 openEuler Buildteam <buildteam@openeuler.org> - 6.0-42
+- Revert CVE-2019-13232
+
 * Fri Sep 20 2019 Zaiwang Li<lizaiwang1@huawei.com> - 6.0-41
 - Init Package
