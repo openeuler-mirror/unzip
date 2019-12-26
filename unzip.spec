@@ -1,6 +1,6 @@
 Name:           unzip
 Version:        6.0
-Release:        42
+Release:        43
 Summary:        A utility for unpacking zip files
 License:        BSD
 URL:            http://www.info-zip.org/UnZip.html
@@ -65,6 +65,9 @@ Package help includes man pages for unzip.
 %{_mandir}/man1/*
 
 %changelog
+* Tue Dec 24 2019 openEuler Buildteam <buildteam@openeuler.org> - 6.0-43
+- Delete unneeded patch
+
 * Sat Dec 21 2019 openEuler Buildteam <buildteam@openeuler.org> - 6.0-42
 - Revert CVE-2019-13232
 
