@@ -174,7 +174,7 @@ Index: unzip-6.0/unzip.c
 +#else /* UNIX */
 +static ZCONST char Far ZipInfoUsageLine3[] = "miscellaneous options:\n\
 +  -h  print header line       -t  print totals for listed files or for all\n\
-+  -z  print zipfile comment  %c-T%c print file times in sortable decimal format\
++  -z  print zipfile comment   -T  print file times in sortable decimal format\
 +\n %c-C%c be case-insensitive   %s\
 +  -x  exclude filenames that follow from listing\n\
 +  -O CHARSET  specify a character encoding for DOS, Windows and OS/2 archives\n\
