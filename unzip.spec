@@ -1,8 +1,8 @@
 Name:           unzip
 Version:        6.0
-Release:        45
+Release:        46
 Summary:        A utility for unpacking zip files
-License:        BSD
+License:        Info-ZIP,Public Domain
 URL:            http://www.info-zip.org/UnZip.html
 Source:         http://downloads.sourceforge.net/infozip/unzip60.tar.gz
 
@@ -36,6 +36,7 @@ Patch6002:      CVE-2019-13232.patch
 Patch6003:      CVE-2019-13232-fur1.patch
 Patch9000:      CVE-2019-13232-fur2.patch
 
+Patch12000:      unzip-6.0-crc-builtin.patch
 
 BuildRequires:  bzip2-devel
 
@@ -70,6 +71,9 @@ Package help includes man pages for unzip.
 %{_mandir}/man1/*
 
 %changelog
+* Tues May 12 2021 openEuler hanzhelii <18221254@bjtu.edu.cn> - 6.0-46
+- add unzip-6.0-crc-builtin.patch
+
 * Mon Mar 2 2020 openEuler Buildteam <buildteam@openeuler.org> - 6.0-45
 - delete garbled characters
 
