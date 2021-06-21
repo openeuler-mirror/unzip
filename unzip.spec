@@ -1,6 +1,6 @@
 Name:           unzip
 Version:        6.0
-Release:        46
+Release:        47
 Summary:        A utility for unpacking zip files
 License:        Info-ZIP,Public Domain
 URL:            http://www.info-zip.org/UnZip.html
@@ -36,9 +36,7 @@ Patch6002:      CVE-2019-13232.patch
 Patch6003:      CVE-2019-13232-fur1.patch
 Patch9000:      CVE-2019-13232-fur2.patch
 
-Patch12000:      unzip-6.0-crc-builtin.patch
-
-BuildRequires:  bzip2-devel
+BuildRequires:  bzip2-devel gcc
 
 %description
 UnZip is an extraction utility for archives compressed in .zip format.
@@ -71,6 +69,9 @@ Package help includes man pages for unzip.
 %{_mandir}/man1/*
 
 %changelog
+* Thu Jun 10 2021 shixuantong <shixuantong@huawei.com> - 6.0-47
+- add gcc to BuildRequires and revert unzip-6.0-crc-builtin.patch
+
 * Tues May 12 2021 openEuler hanzhelii <18221254@bjtu.edu.cn> - 6.0-46
 - add unzip-6.0-crc-builtin.patch
 
