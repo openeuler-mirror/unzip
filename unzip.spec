@@ -1,6 +1,6 @@
 Name:           unzip
 Version:        6.0
-Release:        45
+Release:        46
 Summary:        A utility for unpacking zip files
 License:        BSD
 URL:            http://www.info-zip.org/UnZip.html
@@ -35,6 +35,7 @@ Patch6001:      CVE-2019-13232-pre.patch
 Patch6002:      CVE-2019-13232.patch
 Patch6003:      CVE-2019-13232-fur1.patch
 Patch9000:      CVE-2019-13232-fur2.patch
+Patch9001:      CVE-2022-0529.patch
 
 
 BuildRequires:  bzip2-devel
@@ -70,6 +71,9 @@ Package help includes man pages for unzip.
 %{_mandir}/man1/*
 
 %changelog
+* Thu Feb 22 2022 Lv Ying <lvying6@huawei.com> - 6.0-46
+- fix CVE-2022-0529
+
 * Mon Mar 2 2020 openEuler Buildteam <buildteam@openeuler.org> - 6.0-45
 - delete garbled characters
 
