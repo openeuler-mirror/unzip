@@ -1,6 +1,6 @@
 Name:           unzip
 Version:        6.0
-Release:        48
+Release:        49
 Summary:        A utility for unpacking zip files
 License:        Info-ZIP,Public Domain
 URL:            http://www.info-zip.org/UnZip.html
@@ -62,6 +62,9 @@ Package help includes man pages for unzip.
 %install
 %make_install -f unix/Makefile prefix=$RPM_BUILD_ROOT%{_prefix} MANDIR=$RPM_BUILD_ROOT%{_mandir}/man1 INSTALL="cp -p"
 
+%check
+make check -f unix/Makefile
+
 %files
 %license LICENSE COPYING.OLD
 %doc README BUGS
@@ -71,6 +74,9 @@ Package help includes man pages for unzip.
 %{_mandir}/man1/*
 
 %changelog
+* Tue May 10 2022 shixuantong <shixuantong@h-partners.com> - 6.0-49
+- enable check test suite
+
 * Wed Feb 23 2022 tianwei <tianwei@h-partners.com> - 6.0-48
 - fix CVE-2022-0529 CVE-2022-0530
 
