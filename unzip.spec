@@ -1,6 +1,6 @@
 Name:           unzip
 Version:        6.0
-Release:        49.h1
+Release:        50
 Summary:        A utility for unpacking zip files
 License:        Info-ZIP,Public Domain
 URL:            http://www.info-zip.org/UnZip.html
@@ -75,7 +75,7 @@ make check -f unix/Makefile
 %{_mandir}/man1/*
 
 %changelog
-*Mon Sep 5 2022 zhangnan <zhangnan134@huawei.com> - 6.0-49.h1
+*Mon Sep 5 2022 zhangnan <zhangnan134@huawei.com> - 6.0-50
 - fix CVE-2021-4217
 
 * Tue May 10 2022 shixuantong <shixuantong@h-partners.com> - 6.0-49
