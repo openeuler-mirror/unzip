@@ -1,6 +1,6 @@
 Name:           unzip
 Version:        6.0
-Release:        49
+Release:        50
 Summary:        A utility for unpacking zip files
 License:        Info-ZIP,Public Domain
 URL:            http://www.info-zip.org/UnZip.html
@@ -34,6 +34,7 @@ Patch6000:      CVE-2018-18384.patch
 Patch6001:      CVE-2019-13232-pre.patch
 Patch6002:      CVE-2019-13232.patch
 Patch6003:      CVE-2019-13232-fur1.patch
+Patch6004:      backport-CVE-2021-4217.patch
 Patch9000:      CVE-2019-13232-fur2.patch
 Patch9001:      CVE-2022-0530.patch
 Patch9002:      CVE-2022-0529.patch
@@ -74,6 +75,9 @@ make check -f unix/Makefile
 %{_mandir}/man1/*
 
 %changelog
+* Tue Sep 6 2022 dongyuzhen <dongyuzhen@h-partners.com> - 6.0-50
+- fix CVE-2021-4217
+
 * Tue May 10 2022 shixuantong <shixuantong@h-partners.com> - 6.0-49
 - enable check test suite
 
