@@ -87,7 +87,7 @@ make check -f unix/Makefile
 * Thu Jun 10 2021 shixuantong <shixuantong@huawei.com> - 6.0-47
 - add gcc to BuildRequires and revert unzip-6.0-crc-builtin.patch
 
-* Tues May 12 2021 openEuler hanzhelii <18221254@bjtu.edu.cn> - 6.0-46
+* Tue May 12 2021 openEuler hanzhelii <18221254@bjtu.edu.cn> - 6.0-46
 - add unzip-6.0-crc-builtin.patch
 
 * Mon Mar 2 2020 openEuler Buildteam <buildteam@openeuler.org> - 6.0-45
