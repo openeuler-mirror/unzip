@@ -1,6 +1,6 @@
 Name:           unzip
 Version:        6.0
-Release:        50
+Release:        51
 Summary:        A utility for unpacking zip files
 License:        Info-ZIP,Public Domain
 URL:            http://www.info-zip.org/UnZip.html
@@ -57,8 +57,9 @@ Package help includes man pages for unzip.
 %autosetup -n %{name}60 -p1
 
 %build
+export RPM_OPT_FLAGS="$RPM_OPT_FLAGS -fPIE"
 %make_build -f unix/Makefile CF_NOOPT="-I. -DUNIX $RPM_OPT_FLAGS -DNOMEMCPY -DIZ_HAVE_UXUIDGID -DNO_LCHMOD" \
-                      LFLAGS2="-Wl,-z,relro" generic_gcc
+                      LFLAGS2="-Wl,-z,relro -pie" generic_gcc
 
 %install
 %make_install -f unix/Makefile prefix=$RPM_BUILD_ROOT%{_prefix} MANDIR=$RPM_BUILD_ROOT%{_mandir}/man1 INSTALL="cp -p"
@@ -75,6 +76,9 @@ make check -f unix/Makefile
 %{_mandir}/man1/*
 
 %changelog
+* Sat Mar 4 2023 yanglongkang <yanglongkang@h-partners.com> - 6.0-51
+- add "PIE" compiler options
+
 * Tue Sep 6 2022 dongyuzhen <dongyuzhen@h-partners.com> - 6.0-50
 - fix CVE-2021-4217
 
